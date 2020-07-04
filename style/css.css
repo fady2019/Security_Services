@@ -1,0 +1,882 @@
+*{
+    margin: 0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Arial, Tahoma;
+    text-decoration: none;
+    list-style: none;
+   /* perspective: 1000px;
+    transform-style: preserve-3d;*/
+}
+
+body{
+    width:100%;
+}
+
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+.clear{
+    clear: both;
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+
+/*start navbar*/
+.nav{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.774);
+    position:fixed;
+    z-index: 10000;
+}
+.nav .up{
+    width: 100%;
+    padding:25px 0 0;
+}
+.nav .up .left{
+    float: left;
+    margin-bottom: 20px;
+}
+.nav .up .left i{
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.nav .up .left a:first-of-type i:hover{
+    color: rgb(34, 104, 255);
+}
+.nav .up .left a:nth-of-type(2) i:hover{
+    color: rgba(255, 46, 220, 0.89);
+}
+.nav .up .left a:last-of-type i:hover{
+    color: rgb(33, 255, 25);
+}
+.nav .up .right{
+    float: right;
+    margin-bottom: 20px;
+}
+.nav .up .right a{
+    color: white;
+    margin-left: 30px;
+}
+.nav .up a:hover{
+    color: rgb(255, 230, 1);
+}
+.nav span:first-of-type{
+    width: 100%;
+    display:block;
+    height: 3px;
+    background-color:white;
+}
+
+.nav span:last-of-type{
+    width: 100%;
+    display:block;
+    height: 4px;
+    background-color: rgba(105, 105, 105, 0.808);
+}
+.nav .down{
+    width: 100%;
+}
+.nav .down .left{
+    float: left;
+    padding:7px 0;
+    margin: 0 50px 0 0;
+}
+.nav .down .right{
+    overflow: auto;
+}
+.nav .down .right>ul{
+    padding-top: 15px;
+    float:right;
+}
+.nav .down .right>ul li{
+    display: inline-block;
+    margin-left: 20px;
+}
+.nav .down .right>ul li a{
+    text-transform: uppercase;
+    color: white;
+}
+.nav .down .right>ul li a:hover{
+    color: rgb(255, 230, 1);
+}
+.nav .down .menu{
+    overflow: auto;
+    position: absolute;
+    top: 75px;
+    right: 50px;
+    display: none;
+}
+.nav .down .menu:hover{
+    cursor:pointer;
+}
+.nav .down .menu >span{
+    display: block;
+    width: 50px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.nav .down .menu-info{
+    overflow: auto;
+    background-color:rgba(0, 0, 0, 0.774);
+    position: absolute;
+    top: 122px;
+    right:25px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: none;
+}
+.nav .down .menu-info ul{
+    width: 100px;
+
+}
+.nav .down .menu-info ul li{
+    padding: 10px 15px 5px;
+    text-align: center;
+}
+.nav .down .menu-info ul li a{
+    color: white;
+}
+.nav .down .menu-info ul li a:hover{
+    color: rgb(255, 230, 1);
+}
+
+
+
+@media (max-width: 1050px){
+    .nav .down .right{
+        display: none;
+    }
+    .nav .down .menu{
+        display: block;
+    }
+}
+/*end navbar*/
+
+
+
+
+
+
+/*start header*/
+header{
+    overflow: auto;
+}
+header > section{
+    background-image: url("../images/header-bg.jpg");
+    background-size: 100% 100%;
+    height:750px ;
+    color: white;
+    padding-top: 250px;
+    position: relative;
+}
+header> section .cover{
+    background-color: rgba(0, 0, 0, 0.712);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+header> section .container{
+    position: absolute;
+    left:0;
+    padding-left: 70px;
+}
+header > section h4{
+    margin: 40px 0 30px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header > section h2{
+    font-size: 50px;
+}
+header > section p{
+    font-size: 17px;
+    margin: 25px 0;
+}
+header > section button{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(255, 230, 1);
+    border: 2px solid rgb(255, 230, 1);
+    border-radius: 10px;
+    font-size: 20px;
+}
+header > section button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+@media(max-width:767px){
+    header > section{
+        height:450px ;
+        padding-top: 150px;
+    }
+    header > section h4{
+        margin: 10px 0 20px;
+        font-size: 15px;
+    }
+    header > section h2{
+        font-size: 25px;
+    }
+    header > section p{
+        font-size: 12px;
+        margin: 20px 0;
+        word-wrap: break-word;
+    }
+    header > section button{
+        width: 110px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+}
+
+@media(min-width:768px){
+    header > section{
+        height:550px ;
+        padding-top: 200px;
+        text-align: center;
+    }
+    header > section h4{
+        margin: 20px 0 30px;
+        font-size: 20px;
+    }
+    header > section h2{
+        font-size: 37px;
+    }
+    header > section p{
+        font-size: 18px;
+        margin: 35px 0;
+    }
+    header > section button{
+        width: 120px;
+        height: 45px;
+        font-size: 15px;
+    }
+    
+}
+
+@media(min-width:991px){
+    header > section{
+        height:750px ;
+        padding-top: 250px;
+        text-align: left;
+    }
+    header > section h4{
+        margin: 40px 0 30px;
+        font-size: 25px;
+    }
+    header > section h2{
+        font-size: 50px;
+    }
+    header > section p{
+        font-size: 18px;
+        margin: 35px 0;
+    }
+    header > section button{
+        width: 150px;
+        height: 50px;
+        font-size: 19px;
+    }
+    
+}
+/*end header*/
+
+
+
+
+/*start services*/
+.services{
+    overflow: auto;
+    margin-bottom: 80px;
+}
+.services .up-services{
+    padding: 60px 0 30px;
+}
+.services .up-services h3{
+    text-align: center;
+    font-size: 30px;
+    color:rgb(48, 44, 44);
+    margin: 8px 0;
+}
+.services .up-services p{
+    text-align: center;
+    font-size:15px;
+    color: rgb(138, 138, 138);
+    margin: 10px 0;
+}
+.services .down-services .service{
+    width: 32%;
+    transition: all 0.75s ease-in-out;
+}
+.services .down-services .service1{
+     float: left;
+}
+.services .down-services .service2{
+    float: left;
+    margin-left: 2%;
+}
+.services .down-services .service3{ 
+    float: right;
+}
+.services .down-services .service:hover{
+    background-color:rgb(255, 230, 1) ;
+    cursor: pointer;
+}
+
+.services .down-services .service>div{
+    width: 80%;
+    margin: 0 auto;
+  
+}
+.services .down-services .service>div img{
+    width: 100%;
+    margin:25px 0;
+}
+.services .down-services .service>div h3{
+    font-size: 18px;
+    color:rgb(48, 44, 44);
+    margin:0 ;
+    transition: all 0.75s ease-in-out;
+    
+}
+.services .down-services .service>div p{
+    font-size: 16px;
+    line-height: 1.4;
+    color:rgb(138, 138, 138);
+    margin: 15px 0 30px;
+    transition: all 0.75s ease-in-out;
+}
+.services .down-services .service:hover h3{
+    color:white ;
+}
+.services .down-services .service:hover p{
+    color: white;
+}
+
+
+
+@media(max-width:767px){
+    .services .up-services{
+        padding: 40px 0 15px;
+    }
+    .services .up-services h3{
+        font-size: 21px;
+        margin: 15px 0 5px;
+    }
+    .services .up-services p{
+        font-size:13px;
+        margin: 8px 0 20px;
+    }
+    .services .down-services .service{
+        width:100%;
+        height: 150px;
+        margin:0 0 20px 0;
+        float: left;
+    }
+    .services .down-services .service div:first-of-type{
+        width:28%;
+        height: 100%;
+        float: left;
+        margin-right: 0.5%;
+    }
+    .services .down-services .service div:last-of-type{
+        width: 71%;
+        height: 100%;
+        float: left;
+        margin-left: 0.5%;
+    }
+    .services .down-services .service>div img{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .services .down-services .service>div h3{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .services .down-services .service>div p{
+        text-align: center;
+        margin-top:5px;
+        font-size: 15px;
+    }
+}
+
+@media(min-width:768px){
+    .services .down-services .service{
+       width: 100%;
+       float: left;
+       height: 200px;
+       margin: 0;
+    }
+    
+    .services .down-services .service div:first-of-type
+    {
+        width:50%;
+        height: 100%;
+        float: left;
+        margin:0;
+    }
+   
+    .services .down-services .service div:last-of-type
+    {
+        width: 50%;
+        height: 100%;
+        float: right;
+        margin-left: 0;
+    }
+    .services .down-services .service2 div:first-of-type{float: right;}
+    .services .down-services .service2 div:last-of-type{float: left;}
+    .services .down-services .service>div img{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .services .down-services .service>div h3{
+        text-align: center;
+        margin: 40px 0 15px;
+        font-size: 25px;
+    }
+    .services .down-services .service>div p{
+        text-align: center;
+        margin:5px 0;
+    }
+    
+    
+}
+
+@media(min-width:991px){
+
+    .services .down-services .service{
+        width: 32%;
+        height: auto;
+        margin: 0;
+        border-radius:15px;
+     }
+    .services .down-services .service1{ float: left;}
+    .services .down-services .service2{
+         float: left;
+        margin-left: 2%;
+    }   
+    .services .down-services .service3{ float: right;}
+     .services .down-services .service div:first-of-type
+     {
+         width:80%;
+         float: none;
+         margin:0 auto;
+     }
+    
+     .services .down-services .service div:last-of-type
+     {
+         width: 80%;
+         float: none;
+         margin:0 auto;
+     }
+     .services .down-services .service>div img{
+        width: 100%;
+        margin:25px 0;
+     }
+     .services .down-services .service>div h3{
+        font-size: 18px;
+        margin:0 ;
+        text-align: left;
+    }
+    .services .down-services .service>div p{
+        font-size: 16px;
+        margin: 15px 0 30px;
+        text-align: left;
+    }
+    
+    
+}
+/*end services*/
+
+
+/*start features*/
+.features{
+    overflow: auto;
+    margin: 40px 0 50px 0;
+}
+.features .up{
+    text-align: center;
+}
+.features .up h3{
+    font-size: 28px;
+    color:rgb(48, 44, 44);
+}
+.features .up p{
+    font-size: 15px;
+    color:rgb(138, 138, 138);
+    margin-top: 10px;
+}
+.features .down{
+    margin-top: 40px;
+}
+.features .down .feature{
+    width: 31%;
+    float: left;
+    padding: 35px 20px 50px;
+    margin:0 0 30px 20px;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+.features .down .feature:nth-of-type(3n+3){
+    float: right;
+}
+.features .down .feature h4{
+    font-size: 22px;
+    color:rgb(48, 44, 44);
+}
+.features .down .feature p{
+    font-size: 15px;
+    color:rgb(138, 138, 138);
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.features .down .feature:nth-of-type(2n+1):hover{
+    background-color:rgb(255, 230, 1);
+}
+.features .down .feature:nth-of-type(2n+2):hover{
+    background-color:yellow;
+}
+.features .down .feature:hover h4{
+    color: white;
+}
+.features .down .feature:hover p{
+    color: white;
+}
+.features .down .feature:hover{
+   box-shadow:-10px 10px 5px 0px rgb(163, 163, 163);
+}
+@media(max-width:990px){
+    .features .up h3{
+        font-size: 22px;
+    }
+    .features .up p{
+        font-size: 15px;
+    }
+    .features .down{
+        margin-top: 25px;
+    }
+    .features .down .feature{
+        width: 100%;
+        float: left;
+        margin:12px 0;
+        padding: 15px 30px;
+    }
+    .features .down .feature h4{
+        font-size: 20px;
+        color:rgb(48, 44, 44);
+    }
+    .features .down .feature p{
+        font-size: 14px;
+        color:rgb(138, 138, 138);
+        margin-top: 10px;
+    }
+}
+/*end features*/
+
+
+/*start informations*/
+.informations{
+    overflow: auto;
+    background-color: rgb(255, 230, 1);
+    margin: 40px 0 80px;
+    border-radius: 20px;
+}
+.informations .information{
+    padding: 180px 0 230px;
+}
+.informations .information .info{
+    width: 20%;
+    float: left;
+    text-align: center;
+    color: white;
+}
+.informations .information .info h4{
+    font-size: 50px;
+}
+@media(max-width:767px){
+    .informations .information{
+        padding: 20px 0 0;
+    }
+    .informations .information .info{
+        width:50%;
+        float:left;
+        text-align: center;
+        padding: 20px;
+        color: white;
+    }
+    .informations .information .info:last-of-type{
+        margin: 0 25% 20px;
+    }
+    .informations .information .info h4{
+        font-size: 50px;
+    }
+}
+/*end informations*/
+
+
+/*start galleries*/
+.galleries{
+    overflow: auto;
+    margin: 100px 0;
+}
+.galleries .up{
+    text-align:center;
+}
+.galleries .up h3{
+    font-size: 28px;
+    color:rgb(48, 44, 44);
+}
+.galleries .up p{
+    font-size: 15px;
+    color:rgb(138, 138, 138);
+    margin-top: 10px;
+}
+.galleries .gallery{
+    margin-top: 40px;
+}
+.galleries .gallery .ga{
+    height: 240px;
+    margin-top: 3%;
+}
+.galleries .gallery .ga1{width: 54%;float: left;}
+.galleries .gallery .ga2{width: 43%;float: right;margin-left:3% ;}
+.galleries .gallery .ga3{width: 31%;float: left;}
+.galleries .gallery .ga4{width: 31%;float: left;margin-left:3.5%;}
+.galleries .gallery .ga5{width: 31%;float: right;}
+.galleries .gallery .ga6{width: 43%;float:left;margin-right: 3%;}
+.galleries .gallery .ga7{width: 54%;float: right;}
+
+.galleries .gallery .ga img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+@media(max-width:767px){
+    .galleries .up h3{
+        font-size: 22px;
+    }
+    .galleries .up p{
+        font-size: 13px;
+    }
+    .galleries .gallery .ga{
+        height: 120px;
+    }
+}
+
+@media(min-width:768px){
+    .galleries .up h3{
+        font-size: 25px;
+    }
+    .galleries .up p{
+        font-size: 14px;
+    }
+    .galleries .gallery .ga{
+        height: 180px;
+    }
+}
+
+@media(min-width:991px){
+    .galleries .up h3{
+        font-size: 28px;
+    }
+    .galleries .up p{
+        font-size: 15px;
+    }
+    .galleries .gallery .ga{
+        height: 240px;
+    }
+}
+/*end galleries*/
+
+
+/*start Blogs*/
+.blogs{
+    overflow: auto;
+    background-color: rgb(235, 235, 235);
+    margin:100px 0;
+}
+.blogs .up{
+    text-align: center;
+    margin: 50px;
+}
+.blogs .up h3{
+    font-size: 28px;
+    color:rgb(48, 44, 44);
+}
+.blogs .up p{
+    font-size: 15px;
+    color:rgb(138, 138, 138);
+    margin-top: 10px;
+}
+.blogs .down{
+    overflow: auto;
+    margin: 80px  0 40px 0;
+}
+.blogs .down .blog{
+    width: 24%;
+}
+.blogs .down .blog1{float: left;}
+.blogs .down .blog2{
+    float:left;
+    margin-left: 1.25%;
+}
+.blogs .down .blog3{
+    float:left;
+    margin-left: 1.25%;
+}
+.blogs .down .blog4{float:right;}
+
+.blogs .down .blog div:first-of-type{
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+}
+.blogs .down .blog div:first-of-type img{
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.blogs .down .blog:hover{
+    cursor: pointer;
+}
+.blogs .down .blog:hover img{
+    transform: scale(1.1);
+}
+.blogs .down .blog span:first-of-type{
+    display: block;
+    width: 50%;
+    line-height: 20px;
+    background-color: black;
+    color: white;
+    margin: 10px 0  10px 2.5%;
+    text-align: center;
+}
+.blogs .down .blog h4{
+    font-size: 16px;
+    color:rgb(48, 44, 44);
+    margin: 10px 0  10px 2.5%;
+}
+.blogs .down .blog:hover h4{
+    color:rgb(255, 230, 1);
+}
+.blogs .down .blog p{
+    line-height: 1.6;
+    font-size: 15px;
+    color:rgb(138, 138, 138);
+    margin: 10px 0  10px 2.5%;
+}
+.blogs .down .blog span:last-of-type{
+    display: block;
+    margin: 10px 0  10px 2.5%;
+}
+@media(max-width:990px){
+
+    .blogs .up{text-align: center;margin: 35px;}
+    .blogs .up h3{font-size: 22px;}
+    .blogs .up p{font-size: 13px;margin-top: 10px;}
+    .blogs .down{margin:40px 0;}
+    .blogs .down .blog{width: 48%;margin-bottom:40px;}
+    .blogs .down .blog:nth-of-type(odd){float:left;}
+    .blogs .down .blog:nth-of-type(even){float:right;}
+    .blogs .down .blog span:first-of-type{width: 60%;margin: 10px auto;text-align: center;}
+    .blogs .down .blog h4{font-size: 14px;margin: 10px 0 ;text-align: center;}
+    .blogs .down .blog p{line-height: 1.4;font-size: 14px;text-align: center;margin: 10px 0 ;}
+    .blogs .down .blog span:last-of-type{font-size: 14px;text-align: center;margin: 10px 0 ;}
+}
+
+/*end Blogs*/
+
+
+/*start about us*/
+.aboutUs{
+    overflow: auto;
+    background-color: rgb(255, 230, 1);
+    padding: 85px 0 50px;
+}
+.aboutUs .left{
+    width: 48%;
+    float: left;
+    text-align: center;
+}
+.aboutUs .left h3{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+}
+.aboutUs .left p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    line-height: 1.5;
+}
+.aboutUs .right{
+    width: 48%;
+    float: right;
+}
+.aboutUs .right textarea,
+.aboutUs .right input{
+    display: block;
+    margin: 15px auto;
+    width: 90%;
+    padding:10px 15px;
+    outline: none;
+    border: 0;
+}
+.aboutUs .right textarea{
+    height: 120px;
+}
+.aboutUs .right button{
+    display: block;
+    width: 35%;
+    margin: 15px auto;
+    background: #FFF;
+    padding: 10px 35px;
+    border: 1px solid #000;
+}
+@media (max-width:767px){
+    .aboutUs .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aboutUs .container div{
+        width: 90%;
+        margin: 10px 0 ;
+    }
+    .aboutUs .left p{
+        font-size: 16px;
+    }
+    /* .aboutUs .right textarea,
+    .aboutUs .right input{
+        width: 100%;
+    } */
+    .aboutUs .right button{
+        width: 35%;
+    }
+}
+/*end about us*/
+
+
+/*start footer*/
+footer div{
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 21px;
+}
+@media (max-width:767px){footer div{ font-size: 16px;}}
+/* end footer */
